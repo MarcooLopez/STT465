@@ -60,13 +60,13 @@
  plot(B[,2],type='o')
  
  # 95% Cred. Regions
-  apply(FUN=quantile,prob=c(.025,.975),X=B[-c(1:burnIn),MARGIN=2)
+  apply(FUN=quantile,prob=c(.025,.975),X=B[-c(1:burnIn),],MARGIN=2)
 
  # Posterior Means
-  colMeans(B[-c(1:burnIn))
+  colMeans(B[-c(1:burnIn),])
 
  # Posterior SD
-  apply(FUN=sd,X=B[-c(1:burnIn),MARGIN=2)
+  apply(FUN=sd,X=B[-c(1:burnIn),],MARGIN=2)
 
  
  
